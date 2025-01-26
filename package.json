@@ -1,0 +1,40 @@
+{
+  "name": "isotimer",
+  "repository": "github:fabiospampinato/isotimer",
+  "description": "An isomorphic setImmediate/setInterval/setTimeout implementation.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/node/index.js",
+  "types": "./dist/node/index.d.ts",
+  "exports": {
+    "node": "./dist/node/index.js",
+    "default": "./dist/browser/index.js"
+  },
+  "scripts": {
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "tsex test",
+    "test:watch": "tsex test --watch",
+    "prepublishOnly": "tsex prepare"
+  },
+  "keywords": [
+    "isomorphic",
+    "timer",
+    "timeout",
+    "interval",
+    "ref",
+    "unref"
+  ],
+  "dependencies": {
+    "immediato": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.74",
+    "fava": "^0.3.4",
+    "tsex": "^4.0.2",
+    "typescript": "^5.7.3"
+  }
+}
